@@ -1,3 +1,32 @@
-<p>
-  product-list works!
-</p>
+<div class="row">
+  <h1 class="col-md-12">Product List</h1>
+  <div class='col-md-12'>Filter by: <input type='text' /></div>
+  <div class="col-md-12 table-responsive">
+    <table class='table'>
+                <thead>
+                    <tr>
+                        <th>
+                            <button class='btn btn-primary'>
+                                show Image
+                            </button>
+                        </th>
+                        <th>Product</th>
+                        <th>Code</th>
+                        <th>Available</th>
+                        <th>Price</th>
+                        <th>5 Star Rating</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor='let product of products'>
+                        <td></td>
+                        <td>{{ product.productName }}</td>
+                        <td>{{ product.productCode }}</td>
+                        <td>{{ product.releaseDate }}</td>
+                        <td>{{ product.price }}</td>
+                        <td>{{ product.starRating }}</td>
+                    </tr>
+                </tbody>
+            </table>
+  </div>
+</div>
