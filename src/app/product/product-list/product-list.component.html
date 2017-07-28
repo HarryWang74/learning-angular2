@@ -6,8 +6,8 @@
                 <thead>
                     <tr>
                         <th>
-                            <button class='btn btn-primary'>
-                                show Image
+                            <button class='btn btn-primary'(click)='toggleImage()'>
+                                {{showImage ? 'hide image': 'show image'}}
                             </button>
                         </th>
                         <th>Product</th>
@@ -19,7 +19,11 @@
                 </thead>
                 <tbody>
                     <tr *ngFor='let product of products'>
-                        <td></td>
+                        <td>
+                            <img class="productImg" 
+                                [src]=product.imageUrl
+                                *ngIf='showImage'>
+                        </td>
                         <td>
                             <a [routerLink]="['/product', product.productId]">
                             {{ product.productName }}

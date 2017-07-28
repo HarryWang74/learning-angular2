@@ -7,6 +7,7 @@ import { IProduct } from '../i-product';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent implements OnInit {
+  showImage: boolean = false;
   products: IProduct[] = 
   [
     {
@@ -35,4 +36,7 @@ export class ProductListComponent implements OnInit {
   ngOnInit() {
   }
 
+  toggleImage(): void{
+    this.showImage = !this.showImage;
+  }
 }
