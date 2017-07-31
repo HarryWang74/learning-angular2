@@ -1,6 +1,10 @@
 <div class="row">
-  <h1 class="col-md-12">Product List</h1>
-  <div class='col-md-12'>Filter by: <input type='text' /></div>
+    <h1 class="col-md-12">Product List</h1>
+    <div class='col-md-12'>
+        Filter by:
+        <input type='text' [(ngModel)]='productFilter' />
+        {{productFilter}}
+    </div>
   <div class="col-md-12 table-responsive">
     <table class='table'>
                 <thead>

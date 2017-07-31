@@ -8,6 +8,7 @@ import { IProduct } from '../i-product';
 })
 export class ProductListComponent implements OnInit {
   showImage: boolean = false;
+  productFilter: string = "";
   products: IProduct[] = 
   [
     {
