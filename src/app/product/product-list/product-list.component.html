@@ -2,7 +2,7 @@
     <h1 class="col-md-12">Product List</h1>
     <div class='col-md-12'>
         Filter by:
-        <input type='text' [(ngModel)]='productFilter' />
+        <input type='text' [(ngModel)]='productsFilter' />
         {{productFilter}}
     </div>
   <div class="col-md-12 table-responsive">
@@ -22,7 +22,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor='let product of products'>
+                    <tr *ngFor='let product of products | productFilter: productsFilter'>
                         <td>
                             <img class="productImg" 
                                 [src]=product.imageUrl

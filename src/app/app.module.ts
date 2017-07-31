@@ -7,13 +7,15 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { ProductGuardService } from './product/product-guard.service';
 import { ProductListComponent } from './product/product-list/product-list.component';
 import { ProductDetailComponent } from './product/product-detail/product-detail.component';
+import { ProductFilterPipe } from './product/product-filter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     WelcomeComponent,
     ProductListComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    ProductFilterPipe
   ],
   imports: [
     BrowserModule,
