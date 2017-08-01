@@ -38,7 +38,7 @@
                         <td>{{ product.price | currency: 'USD':true: '1.2-2'}}</td>
                         <td>
                             {{ product.starRating }}
-                            <app-star></app-star>
+                            <app-star [rating]=product.starRating></app-star>
                         </td>
                     </tr>
                 </tbody>
