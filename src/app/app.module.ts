@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import{ HttpModule } from '@angular/http';
+
 import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { ProductGuardService } from './product/product-guard.service';
@@ -20,6 +22,7 @@ import { ProductFilterPipe } from './product/product-filter.pipe';
   imports: [
     BrowserModule,
     FormsModule,
+    HttpModule,
     RouterModule.forRoot([
       { path: 'welcome', component: WelcomeComponent },
       { path: 'products', component: ProductListComponent },
