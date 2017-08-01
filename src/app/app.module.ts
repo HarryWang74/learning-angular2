@@ -10,6 +10,7 @@ import { ProductGuardService } from './product/product-guard.service';
 import { ProductListComponent } from './product/product-list/product-list.component';
 import { ProductDetailComponent } from './product/product-detail/product-detail.component';
 import { ProductFilterPipe } from './product/product-filter.pipe';
+import { StarComponent } from './share/star/star.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ProductFilterPipe } from './product/product-filter.pipe';
     WelcomeComponent,
     ProductListComponent,
     ProductDetailComponent,
-    ProductFilterPipe
+    ProductFilterPipe,
+    StarComponent
   ],
   imports: [
     BrowserModule,
