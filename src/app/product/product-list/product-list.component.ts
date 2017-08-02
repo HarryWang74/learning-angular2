@@ -11,7 +11,7 @@ export class ProductListComponent implements OnInit {
   productsFilter: string = "";
   products: IProduct[];
   errorMessage: string;
-  
+  clickMessage: string;
   constructor(private _productService: ProductService) {}
 
   ngOnInit() {
@@ -21,6 +21,10 @@ export class ProductListComponent implements OnInit {
     );
   }
 
+  onRatingClicked(message: string): void{
+    this.clickMessage = message;
+    alert(this.clickMessage);
+  }
 
   toggleImage(): void{
     this.showImage = !this.showImage;
